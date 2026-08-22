@@ -1,0 +1,25 @@
+- question: "Explique ce qu'est LangGraph"
+  attendu: repond
+  mot_cle: "state"
+
+- question: "Comment déployer LangGraph sur Kubernetes ?"
+  attendu: escalade
+  mot_cle: "humain"
+
+- question: " quelle est la différence entre un noeud et un state en LangGraph ?"
+  attendu: repond 
+  mot_cle: "noeud"
+
+
+- question: "commenty fonctionne le routage dynamique ?"
+  attendu:  repond
+  mot_cle: "routage"
+
+
+- question: " c'est quoi la diffétrence entre langchain et langsmith ?"
+  attendu: escalade
+  mot_cle: "humain"
+
+- question: "comment langgraph aide à gerer la mémoire au fil d une conversation ?"
+  attendu: repond
+  mot_cle: "mémoire"

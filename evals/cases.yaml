@@ -1,25 +1,60 @@
+# Suite d'évaluation de l'agent.
+# attendu   : "repond" (la doc couvre la question) ou "escalade" (hors doc)
+# mots_cles : pour "repond", au moins un doit apparaître dans la réponse (insensible à la casse)
+
+# --- Questions couvertes par la documentation ---
 - question: "Explique ce qu'est LangGraph"
   attendu: repond
-  mot_cle: "state"
+  mots_cles: ["orchestration", "agent"]
 
-- question: "Comment déployer LangGraph sur Kubernetes ?"
-  attendu: escalade
-  mot_cle: "humain"
+- question: "Comment persister l'état d'un graphe avec SQLite ?"
+  attendu: repond
+  mots_cles: ["SqliteSaver", "sqlite"]
 
-- question: " quelle est la différence entre un noeud et un state en LangGraph ?"
-  attendu: repond 
-  mot_cle: "noeud"
+- question: "Qu'est-ce qu'un checkpoint dans LangGraph ?"
+  attendu: repond
+  mots_cles: ["snapshot", "instantané", "état"]
 
+- question: "À quoi sert le thread_id ?"
+  attendu: repond
+  mots_cles: ["thread"]
 
-- question: "commenty fonctionne le routage dynamique ?"
-  attendu:  repond
-  mot_cle: "routage"
+- question: "Comment créer un agent ReAct avec les composants prebuilt ?"
+  attendu: repond
+  mots_cles: ["create_react_agent"]
 
+- question: "À quoi sert ToolNode ?"
+  attendu: repond
+  mots_cles: ["outil", "tool"]
 
-- question: " c'est quoi la diffétrence entre langchain et langsmith ?"
-  attendu: escalade
-  mot_cle: "humain"
+- question: "Quelle commande permet de construire une image Docker de mon application LangGraph ?"
+  attendu: repond
+  mots_cles: ["langgraph build"]
+
+- question: "Comment se connecter à un serveur LangGraph avec le SDK Python ?"
+  attendu: repond
+  mots_cles: ["get_client"]
+
+- question: "Comment utiliser Postgres pour sauvegarder l'état d'un graphe ?"
+  attendu: repond
+  mots_cles: ["PostgresSaver", "postgres"]
 
 - question: "comment langgraph aide à gerer la mémoire au fil d une conversation ?"
   attendu: repond
-  mot_cle: "mémoire"
+  mots_cles: ["mémoire", "memory", "persist", "checkpoint"]
+
+# --- Questions hors documentation : l'agent doit escalader ---
+- question: "Comment déployer LangGraph sur Kubernetes ?"
+  attendu: escalade
+
+- question: "c'est quoi la différence entre langchain et langsmith ?"
+  attendu: escalade
+
+- question: "Quel est le prix d'un abonnement LangSmith Plus ?"
+  attendu: escalade
+
+- question: "Comment connecter LangGraph à une base MongoDB ?"
+  attendu: escalade
+
+- question: "Quelle est la recette de la pâte à crêpes ?"
+  attendu: escalade

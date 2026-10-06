@@ -1,5 +1,17 @@
+# Environnement
 .venv/
 .env
-data/
+
+# Index vectoriel : artefact généré par `python -m support_agent.ingest`
+chroma_db/
+
+# Python
 __pycache__/
 *.pyc
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+
+# Clés SSH : ne jamais versionner
+id_*
+*.pem

@@ -1,0 +1,37 @@
+[project]
+name = "langgraph-support-agent"
+version = "0.2.0"
+description = "Agent de support RAG sur la documentation LangGraph, avec escalade vers un humain."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "langgraph>=1.2,<2",
+    "langchain-core>=1.5,<2",
+    "langchain-community>=0.4,<0.5",
+    "langchain-text-splitters>=1.1,<2",
+    "langchain-chroma>=1.1,<2",
+    "langchain-nvidia-ai-endpoints>=1.4,<2",
+    "chromadb>=1.5,<2",
+    "python-dotenv>=1.0",
+    "PyYAML>=6.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8", "ruff>=0.6"]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
